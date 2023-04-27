@@ -1,7 +1,5 @@
 #!name=爱阅跳广告
 #!desc="卡广告领奖励,请开启MITM或者HTTPS解密(更新日期:2023.03.08)"
-#!openUrl = https://t.me/aiyueshuxiang
-#!homepage = https://t.me/aiyueshuxiang
 [Rule]
 DOMAIN,api-access.pangolin-sdk-toutiao.com,DIRECT
 DOMAIN,open.e.kuaishou.com,REJECT
@@ -23,6 +21,6 @@ DOMAIN-SUFFIX,ugdtimg.com,REJECT
 DOMAIN-SUFFIX,doubleclick.net,REJECT
 DOMAIN-SUFFIX,gvt1.com,REJECT
 [Script]
-http-response ^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads.+ script-path=https://gist.githubusercontent.com/Mattraks/cf41ab5f29271cbfc13922075c54523e/raw/kp.js,requires-body=true,tag=爱阅跳广告直接领取
+http-response ^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads.+ script-path=https://raw.githubusercontent.com/eStar668/iFreetime/main/kp.js,requires-body=true,tag=爱阅跳广告直接领取
 [Mitm]
 hostname = api-access.pangolin-sdk-toutiao.com
